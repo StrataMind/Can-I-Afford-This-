@@ -27,6 +27,11 @@
         </div>
 
         <div class="input-group">
+            <label for="expenses">Monthly Expenses ($)</label>
+            <input type="number" id="expenses" placeholder="Rent, bills, food, etc." min="0" step="0.01">
+        </div>
+
+        <div class="input-group">
             <label for="emi">EMI Option (Months)</label>
             <select id="emi">
                 <option value="0">No EMI - Pay Full</option>
@@ -37,10 +42,35 @@
             </select>
         </div>
 
+        <div class="input-group">
+            <label for="interest">Interest Rate (% per year)</label>
+            <input type="number" id="interest" placeholder="0 for no interest" min="0" max="50" step="0.1" value="0">
+        </div>
+
         <button id="calculate">Calculate Affordability</button>
 
         <div id="result" class="result hidden">
             <div class="status-badge" id="statusBadge"></div>
+            
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-label">Monthly Payment</div>
+                    <div class="metric-value" id="monthlyPayment">$0</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Total Cost</div>
+                    <div class="metric-value" id="totalCost">$0</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Disposable Income</div>
+                    <div class="metric-value" id="disposable">$0</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Savings After</div>
+                    <div class="metric-value" id="savingsAfter">$0</div>
+                </div>
+            </div>
+
             <div class="stress-meter">
                 <div class="stress-label">Financial Stress Level</div>
                 <div class="stress-bar">
@@ -48,6 +78,8 @@
                 </div>
                 <div class="stress-text" id="stressText"></div>
             </div>
+            
+            <div class="recommendation" id="recommendation"></div>
             <div class="details" id="details"></div>
         </div>
     </div>

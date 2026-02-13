@@ -107,6 +107,36 @@ button:active {
     border: 1px solid #e8eaed;
 }
 
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.metric-card {
+    background: white;
+    padding: 14px;
+    border-radius: 6px;
+    border: 1px solid #e8eaed;
+    text-align: center;
+}
+
+.metric-label {
+    font-size: 11px;
+    color: #5f6368;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+}
+
+.metric-value {
+    font-size: 20px;
+    color: #1a73e8;
+    font-weight: 600;
+}
+
 .result.hidden {
     display: none;
 }
@@ -140,7 +170,36 @@ button:active {
 }
 
 .stress-meter {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
+}
+
+.recommendation {
+    background: white;
+    padding: 14px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    border-left: 4px solid;
+    font-weight: 500;
+}
+
+.recommendation.safe {
+    border-color: #1e8e3e;
+    color: #137333;
+    background: #e6f4ea;
+}
+
+.recommendation.risky {
+    border-color: #f9ab00;
+    color: #b95000;
+    background: #fef7e0;
+}
+
+.recommendation.stress {
+    border-color: #c5221f;
+    color: #c5221f;
+    background: #fce8e6;
 }
 
 .stress-label {
